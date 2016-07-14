@@ -1,7 +1,111 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.20.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.20.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+<style>
+    .mapboxgl-popup {
+        max-width: 400px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+</style>
+<div id='map'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1Ijoic3BvcnRlciIsImEiOiJfeGVjVTlBIn0.lATBxpVgPXqnAqMlvLnTvA';
+
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/sporter/ciq8l335r009ucam1v6z3uwc9',
+    center: [2.171, 41.406],
+    zoom: 4
+});
+map.on('load', function() {
+    // Add a GeoJSON source containing place coordinates and information.
+    map.addSource("places", {
+        "type": "geojson",
+        "data": {
+            "type": "FeatureCollection",
+            "features": [{
+                "type": "Feature",
+                "properties": {
+                    "description": "<img src='http://i.imgur.com/kk1J109.jpg' width = 640>",
+                    "icon": "lodging"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [2.354, 43.208]
+                }
+            },{
+                "type": "Feature",
+                "properties": {
+                    "description": "<img src='http://i.imgur.com/QGwvzDo.jpg' width = 640>",
+                    "icon": "restaurant"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [2.171, 41.406]
+                }
+            },
+            
+             {
+                "type": "Feature",
+                "properties": {
+                    "description": "<img src='http://i.imgur.com/1lWg1Gp.jpg' width = 640>",
+                    "icon": "stadium"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-0.574, 44.842]
+                }
+            }]
+        }
+    });
+
+    // Add a layer showing the places.
+    map.addLayer({
+        "id": "places",
+        "type": "symbol",
+        "source": "places",
+        "layout": {
+            "icon-image": "{icon}-15",
+            "icon-allow-overlap": true
+        }
+    });
+});
+map.on('click', function (e) {
+    var features = map.queryRenderedFeatures(e.point, { layers: ['places'] });
+
+    if (!features.length) {
+        return;
+    }
+
+    var feature = features[0];
+
+    // Populate the popup and set its coordinates
+    // based on the feature found.
+    var popup = new mapboxgl.Popup()
+        .setLngLat(feature.geometry.coordinates)
+        .setHTML(feature.properties.description)
+        .addTo(map);
+});
+
+// Use the same approach as above to indicate that the symbols are clickable
+// by changing the cursor style to 'pointer'.
+map.on('mousemove', function (e) {
+    var features = map.queryRenderedFeatures(e.point, { layers: ['places'] });
+    map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
+});
+</script>
+
 </body>
 </html>
