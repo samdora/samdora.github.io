@@ -5,7 +5,7 @@
     <title></title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.20.1/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.20.1/mapbox-gl.css' rel='stylesheet' />
+    <link href='sp-mapbox-gl.css' rel='stylesheet' />
     <style>
         body { margin:0; padding:0; }
         #map { position:absolute; top:0; bottom:0; width:100%; }
@@ -15,7 +15,8 @@
 
 <style>
     .mapboxgl-popup {
-        max-width: 400px;
+        max-width: 420px;
+        max-height: 620px;  
         font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
     }
 </style>
@@ -38,34 +39,334 @@ map.on('load', function() {
             "features": [{
                 "type": "Feature",
                 "properties": {
-                    "description": "<img src='http://i.imgur.com/kk1J109.jpg' width = 640>",
-                    "icon": "lodging"
+                    "description": "<a href='https://i.imgur.com/Hq6DOgN.jpg' target='newwindow'><img src='https://i.imgur.com/Hq6DOgN.jpg' width = 400 border=1></a><br>Caption goes here",
+                    "icon": "attraction"
                 },
                 "geometry": {
                     "type": "Point",
-                    "coordinates": [2.354, 43.208]
+                    "coordinates": [7.274, 43.697]
                 }
             },{
                 "type": "Feature",
                 "properties": {
-                    "description": "<img src='http://i.imgur.com/QGwvzDo.jpg' width = 640>",
-                    "icon": "restaurant"
+                    "description": "<a href='https://i.imgur.com/i4fVi5N.jpg' target='newwindow'><img src='https://i.imgur.com/i4fVi5N.jpg' width = 400 border=1></a><br>Caption goes here",
+                    "icon": "attraction"
                 },
                 "geometry": {
                     "type": "Point",
-                    "coordinates": [2.171, 41.406]
+                    "coordinates": [7.276, 43.697]
                 }
             },
+            
+            {
+                "type": "Feature",
+                "properties": {
+                    "description": "<a href='https://i.imgur.com/0gHekvv.jpg' target='newwindow'><img src='https://i.imgur.com/0gHekvv.jpg' width = 400 border=1></a><br>Caption goes here",
+                    "icon": "attraction"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [5.449, 43.528]
+                }
+            },
+            
+            {
+                "type": "Feature",
+                "properties": {
+                    "description": "<a href='https://i.imgur.com/S0Fu6mK.jpg' target='newwindow'><img src='https://i.imgur.com/S0Fu6mK.jpg' width = 400 border=1></a><br>Caption goes here",
+                    "icon": "attraction"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [4.349, 43.843]
+                }
+            },
+            
+            {
+                "type": "Feature",
+                "properties": {
+                    "description": "<a href='https://i.imgur.com/cmaP9jG.jpg' target='newwindow'><img src='https://i.imgur.com/cmaP9jG.jpg' width = 400 border=1></a><br>Caption goes here",
+                    "icon": "attraction"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [4.356, 43.838]
+                }
+            },
+            
+            
+            
+            {
+                "type": "Feature",
+                "properties": {
+                    "description": "<a href='https://i.imgur.com/ykEuOw2.jpg' target='newwindow'><img src='https://i.imgur.com/ykEuOw2.jpg' width = 400 border=1></a><br>Caption goes here",
+                    "icon": "attraction"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [5.201, 43.911]
+                }
+            },
+            
+            {
+                "type": "Feature",
+                "properties": {
+                    "description": "<a href='https://i.imgur.com/68dEO5D.jpg' target='newwindow'><img src='https://i.imgur.com/68dEO5D.jpg' width = 400 border=1></a><br>Caption goes here",
+                    "icon": "attraction"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [5.201, 43.905]
+                }
+            },
+            
+            {
+                "type": "Feature",
+                "properties": {
+                    "description": "<a href='https://i.imgur.com/agypcab.jpg' target='newwindow'><img src='https://i.imgur.com/agypcab.jpg' width = 400 border=1></a><br>Caption goes here",
+                    "icon": "attraction"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [5.297, 43.901]
+                }
+            },
+            
+            
+            
+            
+            {
+                "type": "Feature",
+                "properties": {
+                    "description": "<a href='https://i.imgur.com/jZKxt7X.jpg' target='newwindow'><img src='https://i.imgur.com/jZKxt7X.jpg' width = 400 border=1></a><br>Caption goes here",
+                    "icon": "attraction"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [5.447, 43.531]
+                }
+            },
+            
+            {
+                "type": "Feature",
+                "properties": {
+                    "description": "<a href='https://i.imgur.com/uhTPQTw.jpg' target='newwindow'><img src='https://i.imgur.com/uhTPQTw.jpg' width = 400 border=1></a><br>Caption goes here",
+                    "icon": "attraction"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [5.447, 43.532]
+                }
+            },
+            
+            {
+                "type": "Feature",
+                "properties": {
+                    "description": "<a href='https://i.imgur.com/O04AaIV.jpg' target='newwindow'><img src='https://i.imgur.com/O04AaIV.jpg' width = 400 border=1></a><br>Caption goes here",
+                    "icon": "attraction"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [7.276, 43.696]
+                }
+            },
+            
+            
+            
+            
+            {
+                "type": "Feature",
+                "properties": {
+                    "description": "<a href='https://i.imgur.com/4cpD1CZ.jpg' target='newwindow'><img src='https://i.imgur.com/4cpD1CZ.jpg' width = 400 border=1></a><br>Caption goes here",
+                    "icon": "attraction"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [7.267, 43.695]
+                }
+            },
+            
+            {
+                "type": "Feature",
+                "properties": {
+                    "description": "<a href='https://i.imgur.com/arV9Z2n.jpg' target='newwindow'><img src='https://i.imgur.com/arV9Z2n.jpg' width = 400 border=1></a><br>Caption goes here",
+                    "icon": "attraction"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [4.349, 43.84]
+                }
+            },
+            
+            {
+                "type": "Feature",
+                "properties": {
+                    "description": "<a href='https://i.imgur.com/sGcB20I.jpg' target='newwindow'><img src='https://i.imgur.com/sGcB20I.jpg' width = 400 border=1></a><br>Caption goes here",
+                    "icon": "attraction"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [5.439, 43.525]
+                }
+            },
+            
+            
+            
+            
+            {
+                "type": "Feature",
+                "properties": {
+                    "description": "<a href='https://i.imgur.com/1ETeFLv.jpg' target='newwindow'><img src='https://i.imgur.com/1ETeFLv.jpg' width = 400 border=1></a><br>Caption goes here",
+                    "icon": "attraction"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [7.279, 43.698]
+                }
+            },
+            
+            {
+                "type": "Feature",
+                "properties": {
+                    "description": "<a href='https://i.imgur.com/5hkqRei.jpg' target='newwindow'><img src='https://i.imgur.com/5hkqRei.jpg'' width = 400 border=1></a><br>Caption goes here",
+                    "icon": "attraction"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [7.282, 43.695]
+                }
+            },
+            
+            {
+                "type": "Feature",
+                "properties": {
+                    "description": "<a href='https://i.imgur.com/o7yIvVm.jpg' target='newwindow'><img src='https://i.imgur.com/o7yIvVm.jpg' width = 400 border=1></a><br>Caption goes here",
+                    "icon": "attraction"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [7.279, 43.694]
+                }
+            },
+            
+            
+            
+            
+            {
+                "type": "Feature",
+                "properties": {
+                    "description": "<a href='https://i.imgur.com/wWz8RrT.jpg' target='newwindow'><img src='https://i.imgur.com/wWz8RrT.jpg' width = 400 border=1></a><br>Caption goes here",
+                    "icon": "attraction"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [5.224, 43.438]
+                }
+            },
+            
+            {
+                "type": "Feature",
+                "properties": {
+                    "description": "<a href='https://i.imgur.com/zRhysux.jpg' target='newwindow'><img src='https://i.imgur.com/zRhysux.jpg' width = 400 border=1></a><br>Caption goes here",
+                    "icon": "attraction"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [5.374, 43.293]
+                }
+            },
+            
+            {
+                "type": "Feature",
+                "properties": {
+                    "description": "<a href='http://i.imgur.com/pJg7Cyp.jpg' target='newwindow'><img src='http://i.imgur.com/pJg7Cyp.jpg' width = 400 border=1></a><br>Caption goes here",
+                    "icon": "attraction"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [5.396, 43.269]
+                }
+            },
+            
+            
+            
+            
+            {
+                "type": "Feature",
+                "properties": {
+                    "description": "<a href='https://i.imgur.com/PJLoJAi.jpg' target='newwindow'><img src='https://i.imgur.com/PJLoJAi.jpg' width = 400 border=1></a><br>Caption goes here",
+                    "icon": "attraction"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [5.396, 43.269]
+                }
+            },
+            
+            {
+                "type": "Feature",
+                "properties": {
+                    "description": "<a href='https://i.imgur.com/riVheVJ.jpg' target='newwindow'><img src='https://i.imgur.com/riVheVJ.jpg' width = 400 border=1></a><br>Caption goes here",
+                    "icon": "attraction"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [5.696, 43.17]
+                }
+            },
+            
+            
+            
+            
+            {
+                "type": "Feature",
+                "properties": {
+                    "description": "<a href='https://i.imgur.com/e8T31Ui.jpg' target='newwindow'><img src='https://i.imgur.com/e8T31Ui.jpg' width = 400 border=1></a><br>Caption goes here",
+                    "icon": "attraction"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [ 5.296, 43.901]
+                }
+            },
+            
+            {
+                "type": "Feature",
+                "properties": {
+                    "description": "<a href='https://i.imgur.com/VjOejp9.jpg' target='newwindow'><img src='https://i.imgur.com/VjOejp9.jpg' width = 400 border=1></a><br>Caption goes here",
+                    "icon": "attraction"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [5.271, 43.917]
+                }
+            },
+            
+            {
+                "type": "Feature",
+                "properties": {
+                    "description": "<a href='https://i.imgur.com/XbhqqUN.jpg' target='newwindow'><img src='https://i.imgur.com/XbhqqUN.jpg' width = 400 border=1></a><br>Caption goes here",
+                    "icon": "attraction"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [5.307, 43.863]
+                }
+            },
+            
+            
+            
+            
             
              {
                 "type": "Feature",
                 "properties": {
-                    "description": "<img src='http://i.imgur.com/1lWg1Gp.jpg' width = 640>",
-                    "icon": "stadium"
+                    "description": "<a href='http://i.imgur.com/4wBSgQ4.jpg' target='newwindow'><img src='http://i.imgur.com/4wBSgQ4.jpg' width = 400 border=1></a><br>Caption goes here",
+                    "icon": "attraction"
                 },
                 "geometry": {
                     "type": "Point",
-                    "coordinates": [-0.574, 44.842]
+                    "coordinates": [5.394, 43.269]
                 }
             }]
         }
